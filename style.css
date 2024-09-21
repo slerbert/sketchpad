@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
 }
 
 .container {
@@ -35,9 +34,10 @@
     align-items: center;
     width: 75vh;
     height: 75vh;
+    outline: 2px solid black;
 }
 
-.test-square {
+.square {
     outline: 1px solid black;
     height: 25%;
     width: 25%;
