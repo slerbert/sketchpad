@@ -40,4 +40,5 @@
 .square {
     height: 25%;
     width: 25%;
+    outline: 1px solid rgba(211, 211, 211, 0.20);
 }
