@@ -7,7 +7,17 @@ const squareRulesCSS = [...stylesheet.cssRules].find(
 const squareContainer = document.querySelector('.squares-container');
 const newGridButton = document.querySelector('#new-grid');
 
-newGridButton.addEventListener('click', getNewGridSpec);
+function randomRange(min, max) {
+    return Math.floor(Math.random() * (max-min)) + min;
+}
+
+function randomColor() {
+    return `rgb(
+        ${randomRange(0, 255)},
+        ${randomRange(0, 255)},
+        ${randomRange(0, 255)}
+    )`;
+}
 
 function getNewGridSpec() {
     let keepGoing = true;
@@ -41,6 +51,12 @@ function createGrid(num) {
         squareContainer.appendChild(square);
     }
 }
+
+newGridButton.addEventListener('click', getNewGridSpec);
+
+squareContainer.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = randomColor();
+});
 
 // Initialize grid with 16 squares
 createGrid(16);

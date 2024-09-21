@@ -38,8 +38,6 @@
 }
 
 .square {
-    outline: 1px solid black;
     height: 25%;
     width: 25%;
-    /* Height and width of squares need to be set as a proportion of square root of total squares */
 }
